@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Ichiban Animes</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ichiban Mangas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="col-lg-10">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex col-lg-2" id="animeForm">
+                    <input class="form-control me-2" type="search" autocomplete="off" placeholder="Search anime 💬"  data-toggle="dropdown" id="request" aria-label="Search">
+                    <div class="dropdown-menu" id="dropdown-menu"></div>
+                </form>
+          </div>
+        </div>
+    </nav> 
+
+    <h1 class="text-center mt-2">Retrouvez ici vos meilleurs animés !</h1>
+    <h3 class="text-center mt-3" style="color:grey;">Tapez le nom de votre animé préféré dans la barre de recherche, une carte de ce dernier apparaitra ci-dessous.</h3>
+
+    <div id="container" class="container mt-5">
+        <div class="row">
+            
+        </div>
+    </div>
+
+                    <!-- MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-source" style="background-color: lightGrey; padding:5px;"></div>
+                    <div class="modal-duration" style="padding:5px;"></div>
+                    <div class="modal-genre" style="background-color: lightGrey; padding:5px;"></div>
+                    <div class="modal-synopsis mt-2" style="padding:5px;"></div>
+                    <div class="modal-trailer mt-2" style="background-color: lightGrey;padding:5px;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="js/apiCall.js"></script>
+ 
+</body>
+</html>
