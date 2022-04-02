@@ -28,7 +28,7 @@ Il existe un évènement pour savoir quand la valeur d'un champ texte a changée
 https://developer.mozilla.org/fr/docs/Web/API/HTMLElement/input_event
 
 
-B. Liste de cartes
+<strong>B. Liste de cartes</strong>
 
 Nous avons une liste de cartes. Chaque carte représente un anime qui a été choisi depuis la barre de recherche.
 
@@ -40,7 +40,7 @@ Le score noté sur 10
 Le nombre d'épisode
 Un bouton d'information est présent et ouvre une fenêtre modale quand vous cliquez dessus.
 
-C. Détail d'un anime
+<strong>C. Détail d'un anime</strong>
 
 Dans la fenêtre ouverte lorsque l'on a cliqué sur le bouton Info d'une carte, nous pouvons trouver les informations suivantes :
 
