@@ -16,7 +16,7 @@ https://github.com/axios/axios
 Fonctionnalités de l'application :
 
 
-A. Barre de recherche
+<strong>A. Barre de recherche</strong>
 
 En tapant dans cette barre, à partir de 3 lettres tapées, cela lancera une recherche d'anime par son nom
 Une liste apparaît avec les résultats de recherches. En cliquant sur un des résultats, cela ajoutera une carte dans la liste des animes
