@@ -11,36 +11,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="app.css">
+
     <title>Ichiban Animes</title>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Ichiban Mangas</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="col-lg-10">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                    </ul>
-                </div>
-                <form class="d-flex col-lg-2" id="animeForm">
-                    <input class="form-control me-2" type="search" autocomplete="off" placeholder="Search anime 💬"  data-toggle="dropdown" id="request" aria-label="Search">
-                    <div class="dropdown-menu" id="dropdown-menu"></div>
-                </form>
-          </div>
-        </div>
-    </nav> 
-
-    <h1 class="text-center mt-2">Retrouvez ici vos meilleurs animés !</h1>
+    <h1 class="text-center mt-2">ICHIBAN <strong>MANGAS</strong>!</h1>
+    <img src="banner.webp" alt="mangas image" id="banner">
     <h3 class="text-center mt-3" style="color:grey;">Tapez le nom de votre animé préféré dans la barre de recherche, une carte de ce dernier apparaitra ci-dessous.</h3>
+    <p class="text-center">(S'il n'apparaît pas, c'est qu'il n'est pas dans la base de données  :'(    désolé! )</p>
+    <form class="d-flex col-lg-4" id="animeForm">
+        <input class="form-control me-2" type="search" autocomplete="off" placeholder="Search anime 💬"  data-toggle="dropdown" id="request" aria-label="Search">
+        <div class="dropdown-menu" id="dropdown-menu"></div>
+    </form>
 
-    <div id="container" class="container mt-5">
+    <div id="container" class="container mt-2">
         <div class="row">
             
         </div>

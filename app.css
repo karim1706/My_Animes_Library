@@ -1,0 +1,14 @@
+#animeForm {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#request {
+    border-radius: 5px;
+    border-color: black;
+}
+
+#banner {
+    height: 300px;
+    width: 100%;
+}

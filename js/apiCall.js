@@ -26,14 +26,15 @@ function init()
         let animeChoice = e.target.value;
 
         if(animeChoice.trim().length >= 3)
-        {
-                    
+        {      
             axios
-            .get('https://api.jikan.moe/v3/search/anime?q='+animeChoice)
+            .get('https://api.jikan.moe/v4/anime?q='+animeChoice) 
+            
             .then(response => {  
+               
 
-                    let res = response.data.results; 
-                    let container = document.getElementById('container');
+                    let res = response.data.data; 
+                    let container = document.getElementById('container'); console.log(res);
                     let row = document.querySelector('.row');
                    
                                     
@@ -42,7 +43,7 @@ function init()
                                 
                                 const datas = res[index]; 
 
-                                let idAnime = datas.mal_id; 
+                                let idAnime = response.data.mal_id; 
                                 
                                 let link = document.createElement("a")
                                     link.classList.add("dropdown-item")
@@ -53,7 +54,7 @@ function init()
                                     // CARDS
                                    
                                     let column = document.createElement('div');
-                                        column.setAttribute('class', '.col-lg-4');
+                                        column.setAttribute('class', '.col-lg-3');
                                         column.style.margin = "0 auto";
 
                                     let card = document.createElement('div'); 
@@ -68,7 +69,7 @@ function init()
                                     let img = document.createElement('img');
                                         img.setAttribute('class', 'card-img-top');
                                         img.style.height = "286px";
-                                        img.src = datas.image_url;
+                                        img.src = datas.images.webp.image_url;
 
                                     let title = document.createElement('h5');
                                         title.setAttribute('class', 'card-title');
@@ -107,14 +108,14 @@ function init()
                                         modalSynopsis.innerHTML = "<strong>SYNOPSIS  :</strong>" + " " + " " + datas.synopsis;
                                        
                                         axios
-                                        .get('https://api.jikan.moe/v3/anime/'+idAnime)
+                                        .get(`https://api.jikan.moe/v4/${idAnime}/anime`)
                                         .then(response => { console.log(response);
 
                                         let res2 = response.data;
-                                        let animeGenre = res2.genres;  console.log(animeGenre); 
+                                        let animeGenre = res2.genres.name;  console.log(animeGenre); 
                                         let duration = res2.duration;
                                         let source = res2.source;
-                                        let trailer = res2.trailer_url;
+                                        let trailer = res2.trailer.url;
 
                                         let modalGenre = document.querySelector('.modal-genre'); 
                                             modalGenre.innerHTML = "<strong>ANIME GENRE :</strong>" + " " ; 
@@ -160,7 +161,11 @@ function init()
                                 dropdownMenu.appendChild(link)
 
                             } 
+                    
             })
+            .catch(error => {
+                console.log(error)
+             })
         }else if(animeChoice.trim().length == 0){
             dropdownMenu.innerHTML = ''; 
         }
