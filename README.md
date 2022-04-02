@@ -29,6 +29,7 @@ https://developer.mozilla.org/fr/docs/Web/API/HTMLElement/input_event
 
 
 B. Liste de cartes
+
 Nous avons une liste de cartes. Chaque carte représente un anime qui a été choisi depuis la barre de recherche.
 
 On y trouve :
@@ -40,6 +41,7 @@ Le nombre d'épisode
 Un bouton d'information est présent et ouvre une fenêtre modale quand vous cliquez dessus.
 
 C. Détail d'un anime
+
 Dans la fenêtre ouverte lorsque l'on a cliqué sur le bouton Info d'une carte, nous pouvons trouver les informations suivantes :
 
 Dans l'entête de la fenêtre :
